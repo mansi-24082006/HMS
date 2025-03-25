@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-image: linear-gradient(to top, #6a85b6 0%, #bac8e0 100%);    justify-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.payment-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input, form select, form button {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #27ae60;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+    </style>
+</head>
+<body>
+    <div class="payment-container">
+        <h1>Fee Payment</h1>
+        <form id="paymentForm">
+            <label for="studentId">Student ID:</label>
+            <input type="text" id="studentId" name="studentId" placeholder="Enter your Student ID" required>
+            
+            <label for="amount">Amount (INR):</label>
+            <input type="number" id="amount" name="amount" placeholder="Enter fee amount" required>
+            
+            <label for="paymentMethod">Payment Method:</label>
+            <select id="paymentMethod" name="paymentMethod" required>
+                <option value="upi">UPI</option>
+                <option value="card">Debit/Credit Card</option>
+                <option value="netbanking">Net Banking</option>
+            </select>
+            
+            <button type="submit">Pay Now</button>
+        </form>
+    </div>
+    <script src="payment.js"></script>
+</body>
+</html>
